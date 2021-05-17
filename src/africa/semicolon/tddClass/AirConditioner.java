@@ -11,8 +11,6 @@ public class AirConditioner {
         this.temperature = temperature;
     }
 
-    public AirConditioner(){ }
-
     public boolean isOn() {
         return isOn;
     }
@@ -44,29 +42,45 @@ public class AirConditioner {
         return temperature;
     }
 
+
     public void setTemperature(int newTemperature) {
+        if( isOn == true){
         if(newTemperature >= 16 && newTemperature <= 30){
         temperature=newTemperature;
         } else {
             System.out.print("Please set temperature between 16 and 30");
         }
+        }
     }
+
+
 
     public void decreaseTemperature() {
-        if(temperature > 16){
-            temperature--;
-        } else {
-            System.out.println("Temperature cant go below 16");
+        if (isOn == true) {
+            if (temperature > 16) {
+                temperature= temperature-1;
+            } else {
+                System.out.println("Temperature cant go below 16");
+            }
         }
     }
+
+
 
     public void increaseTemperature() {
-        if(temperature < 30) {
-            temperature++;
-        } else {
-            System.out.println("Temperature cant go above 30");
+        if( isOn == true) {
+            if (temperature < 30) {
+                temperature= temperature+1;
+            } else {
+                System.out.println("Temperature cant go above 30");
+            }
         }
+
     }
 
-
+    public void powerOff() {
+        if(isOn)
+        {isOn = false;temperature=0;
+        }
+    }
 }
