@@ -1,4 +1,4 @@
-package africa.semicolon.airCondition;
+package africa.semicolon;
 
 public class AirConditioner {
     private boolean isOn;
@@ -67,39 +67,6 @@ public class AirConditioner {
             System.out.println("Temperature cant go above 30");
         }
     }
-
-
-//    public AirConditioner(boolean isOn, String productName, int temperature) {
-//        this.isOn = isOn;
-//        this.productName = productName;
-//        this.temperature = temperature;
-//    }
-//
-//    public AirConditioner() { }
-//
-//    public boolean isOn() {
-//        return isOn;
-//    }
-//
-//    public void setOn(boolean on) {
-//        isOn = on;
-//    }
-//
-//    public String getProductName() {
-//        return productName;
-//    }
-//
-//    public void setProductName(String productName) {
-//        this.productName = productName;
-//    }
-//
-//    public int getTemperature() {
-//        return temperature;
-//    }
-//
-//    public void setTemperature(int temperature) {
-//        this.temperature = temperature;
-//    }
 
 
 }

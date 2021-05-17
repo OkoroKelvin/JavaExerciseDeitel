@@ -1,4 +1,4 @@
-package africa.semicolon.airCondition;
+package africa.semicolon;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

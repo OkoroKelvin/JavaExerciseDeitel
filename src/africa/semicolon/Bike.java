@@ -1,4 +1,4 @@
-package africa.semicolon.chapterThree;
+package africa.semicolon;
 
 public class Bike {
     private int speedInKmPerHour;
