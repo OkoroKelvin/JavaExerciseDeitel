@@ -1,4 +1,4 @@
-package africa.semicolon.ecomercesrc;
+package africa.semicolon.ecomercetest;
 
 public class Delivery {
     private int deliveryRef;
