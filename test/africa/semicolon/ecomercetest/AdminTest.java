@@ -1,2 +1,22 @@
-package africa.semicolon.ecomercetest;public class AdminTest {
+package africa.semicolon.ecomercetest;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class AdminTest {
+    Admin admin = new Admin();
+    @Test
+    public void testForAdminName(){
+      admin.setTheAdminName("Rooney");
+      assertEquals("Rooney", admin.getTheAdminName());
+
+    }
+
+    @Test
+    public void testForAdminEmail(){
+        admin.setTheAdminEmail("Rooney@yahoo.com");
+        assertEquals("Rooney@yahoo.com",admin.getTheAdminEmail());
+    }
+
 }
