@@ -1,4 +1,4 @@
-package africa.semicolon;
+package africa.semicolon.tddClass;
 
 /*
 ClassName: Bike
