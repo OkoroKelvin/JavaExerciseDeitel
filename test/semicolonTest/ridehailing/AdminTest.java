@@ -1,5 +1,6 @@
-package africa.semicolon.ridehailing;
+package semicolonTest.ridehailing;
 
+import africa.semicolon.ridehailing.Admin;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

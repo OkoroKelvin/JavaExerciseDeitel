@@ -1,5 +1,6 @@
-package africa.semicolon.tddClass;
+package semicolonTest.tddClass;
 
+import africa.semicolon.tddClass.AirConditioner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

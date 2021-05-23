@@ -1,5 +1,6 @@
-package africa.semicolon.edutech;
+package semicolonTest.edutech;
 
+import africa.semicolon.edutech.Learner;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

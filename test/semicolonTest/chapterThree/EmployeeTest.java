@@ -1,4 +1,4 @@
-package africa.semicolon.chapterThree;
+package semicolonTest.chapterThree;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

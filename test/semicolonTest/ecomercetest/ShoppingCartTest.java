@@ -1,5 +1,6 @@
-package africa.semicolon.ecomercetest;
+package semicolonTest.ecomercetest;
 
+import africa.semicolon.ecomercetest.ShoppingCart;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

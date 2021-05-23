@@ -1,5 +1,6 @@
-package africa.semicolon.tddClass;
+package semicolonTest.tddClass;
 
+import africa.semicolon.tddClass.Calculator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
