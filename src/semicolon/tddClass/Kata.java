@@ -1,4 +1,4 @@
-package africa.semicolon.tddClass;
+package semicolon.tddClass;
 import java.util.Scanner;
 
 public class Kata {
@@ -43,7 +43,7 @@ public class Kata {
         return grade;
     }
 
-    public int totalPriceTestDriller(int copies) {
+    public int calculateTotalPrice(int copies) {
         if (copies >= 1 && copies <= 4) {
             totalPrice = copies * 1500;
         } else if (copies >= 5 && copies <= 9) {
@@ -62,7 +62,7 @@ public class Kata {
         return totalPrice;
     }
 
-    public int displayProfit(int copies) {
+    public int calculateProfit(int copies) {
         if (copies >= 1 && copies <= 4) {
             costPrice = 1500;
             sellerPrice = 2000;
@@ -104,6 +104,17 @@ public class Kata {
                 resellerProfit = (sellerPrice * copies) - (costPrice * copies);
             }
         return resellerProfit;
+    }
+    public int calculateAmountOfFactor(int numberInput) {
+        int factor = 1;
+        int count = 0;
+        while (factor <= numberInput) {
+            if (numberInput % factor == 0) {
+                count++;
+            }
+            factor++;
+        }
+        return count;
     }
 
 }

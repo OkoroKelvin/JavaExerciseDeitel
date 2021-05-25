@@ -1,9 +1,9 @@
 package semicolonTest.tddClass;
 
-import africa.semicolon.tddClass.Kata;
 import org.junit.jupiter.api.Test;
+import semicolon.tddClass.Kata;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 //TestForStudentGradesAndScores
 class KataTest {
 
@@ -40,41 +40,46 @@ class KataTest {
     @Test
     public void testToKnowTotalPriceOfTestDrillerProductOneToFourCopies(){
         Kata myKata= new Kata();
-        assertEquals(3000, myKata.totalPriceTestDriller(2));
+        assertEquals(3000, myKata.calculateTotalPrice(2));
     }
     @Test
     public void testToKnowTotalPriceOfTestDrillerProductFiveToNineCopies(){
         Kata myKata= new Kata();
-        myKata.totalPriceTestDriller(7);
-        assertEquals(9800,myKata.totalPriceTestDriller(7));
+        myKata.calculateTotalPrice(7);
+        assertEquals(9800,myKata.calculateTotalPrice(7));
     }
     @Test
     public void testToKnowTotalPriceOfTestDrillerProduct30To49Copies(){
         Kata myKata= new Kata();
-        assertEquals(44000,myKata.totalPriceTestDriller(40));
+        assertEquals(44000,myKata.calculateTotalPrice(40));
     }
     @Test
     public void testToKnowTotalPriceOfTestDrillerProduct50To99Copies(){
         Kata myKata=new Kata();
-        assertEquals(50000,myKata.totalPriceTestDriller(50));
+        assertEquals(50000,myKata.calculateTotalPrice(50));
     }
     @Test
     public void testToKnowTotalPriceOfTestDrillerProduct100To200Copies(){
         Kata myKata=new Kata();
-        assertEquals(90000,myKata.totalPriceTestDriller(100));
+        assertEquals(90000,myKata.calculateTotalPrice(100));
     }
     @Test
     public void testToKnowTotalPriceOfTestDrillerProductAbove200Copies(){
         Kata myKata= new Kata();
-        assertEquals(160800,myKata.totalPriceTestDriller(201));
+        assertEquals(160800,myKata.calculateTotalPrice(201));
     }
     @Test
     public void testToKnowTheProfitOfTheSeller(){
         Kata myKata=new Kata();
-        assertEquals(1000,myKata.displayProfit(2));
-        assertEquals(1500,myKata.displayProfit(3));
-        assertEquals(3000,myKata.displayProfit(5));
-        assertEquals(36000,myKata.displayProfit(40));
+        assertEquals(1000,myKata.calculateProfit(2));
+        assertEquals(1500,myKata.calculateProfit(3));
+        assertEquals(3000,myKata.calculateProfit(5));
+        assertEquals(36000,myKata.calculateProfit(40));
 
+    }
+    @Test
+    public void testToKnowTheFactorsOfNumber(){
+        Kata myKata=new Kata();
+        assertEquals(4,myKata.calculateAmountOfFactor(10));
     }
 }
