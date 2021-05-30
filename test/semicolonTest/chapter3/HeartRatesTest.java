@@ -27,6 +27,18 @@ public class HeartRatesTest {
     public void testToGetThePersonsAgeInYear(){
         assertEquals(23, myHeart.getAgeInYears());
 
+
+    }
+    @Test
+    public void testToGetMaximumHeartRate(){
+        myHeart.calculateMaximumHeartRate();
+        assertEquals(197,myHeart.calculateMaximumHeartRate());
+
+    }
+    @Test
+    public void testToGetTheTargetHeartRate(){
+        myHeart.calculateTargetHeartRate();
+        assertEquals(117,myHeart.calculateTargetHeartRate());
     }
 
 }

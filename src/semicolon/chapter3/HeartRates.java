@@ -6,6 +6,8 @@ public class HeartRates {
     private Date dateOfBirth;
     private String firstName;
     private String lastName;
+    private int maximumHeartRate;
+    private double targetHeartRate;
 
 
     public HeartRates(String firstName, String lastName, Date dateOfBirth) {
@@ -41,9 +43,20 @@ public class HeartRates {
 
         if(currentMonth>dateOfBirth.getDateMonth()||currentDay> dateOfBirth.getDateDay())
 
-        {return currentYear-dateOfBirth.getYearOfDate()-1 ;}
+        {return currentYear-dateOfBirth.getYearOfDate() ;}
         else{
-            return currentYear- dateOfBirth.getYearOfDate();
+            return currentYear- dateOfBirth.getYearOfDate()-1;
         }
     }
+
+    public int calculateMaximumHeartRate() {
+         maximumHeartRate = 220- getAgeInYears();
+         return maximumHeartRate;
+    }
+
+    public double calculateTargetHeartRate() {
+        targetHeartRate= (0.6 * 195);
+        return targetHeartRate;
+    }
 }
+
