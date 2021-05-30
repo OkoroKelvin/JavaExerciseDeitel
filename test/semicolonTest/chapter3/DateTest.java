@@ -1,8 +1,8 @@
-package semicolonTest.chapterThree;
+package semicolonTest.chapter3;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import semicolon.chapterThree.Date;
+import semicolon.chapter3.Date;
 
 
 //import java.sql.Date;

@@ -1,3 +1,5 @@
+package semicolon.tddClass;
+
 import java.util.Scanner;
 public class SentinelLoop {
     public static void main(String... args) {

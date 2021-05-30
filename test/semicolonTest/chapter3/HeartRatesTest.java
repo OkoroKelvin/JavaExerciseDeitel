@@ -1,8 +1,9 @@
-package semicolonTest.chapterThree;
+package semicolonTest.chapter3;
 
 import org.junit.jupiter.api.BeforeEach;
-
 import org.junit.jupiter.api.Test;
+import semicolon.chapter3.Date;
+import semicolon.chapter3.HeartRates;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -10,7 +11,7 @@ public class HeartRatesTest {
     HeartRates myHeart;
     @BeforeEach
     void setup(){
-        myHeart=new HeartRates("Tobias","Eze",);
+        myHeart=new HeartRates("Tobias","Eze",new Date(5,28,1998));
     }
     @Test
     public void testToSetFirstName(){
@@ -23,8 +24,9 @@ public class HeartRatesTest {
         assertEquals("Phillip",myHeart.getLastName());
     }
     @Test
-    public void testForDateOfBirth(){
-        myHeart.setDateOfBirth();
+    public void testToGetThePersonsAgeInYear(){
+        assertEquals(23, myHeart.getAgeInYears());
+
     }
 
 }
