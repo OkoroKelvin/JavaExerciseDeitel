@@ -82,4 +82,9 @@ class KataTest {
         Kata myKata=new Kata();
         assertEquals(4,myKata.calculateAmountOfFactor(10));
     }
+    @Test
+    public void testToGetTheReverseOfANumber(){
+        Kata myKata=new Kata();
+        assertEquals("54721",myKata.reverseNumber(12745));
+    }
 }

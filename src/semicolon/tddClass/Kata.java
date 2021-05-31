@@ -117,4 +117,13 @@ public class Kata {
         return count;
     }
 
+    public String reverseNumber(int realNumber) {
+        int num5=realNumber%10;
+        int num4=realNumber%100/10;
+        int num3=realNumber/100%10;
+        int num2=realNumber/1000%10;
+        int num1=realNumber/10000;
+
+        return num5+""+num4+""+num3+""+num2+""+num1;
+    }
 }
