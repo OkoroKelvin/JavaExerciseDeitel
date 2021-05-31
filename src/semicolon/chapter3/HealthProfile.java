@@ -1,6 +1,4 @@
-package semicolonTest.chapter3;
-
-import semicolon.chapter3.Date;
+package semicolon.chapter3;
 
 public class HealthProfile {
 
@@ -11,11 +9,14 @@ public class HealthProfile {
     private int heightInInches;
     private int weightInPound;
 
-    public HealthProfile(String firstName,String lastName, String gender, Date dateOfBirth,int heightInInches,int weightInPound) {
+
+    public HealthProfile(String firstName, String lastName, String gender, Date dateOfBirth, int heightInInches,int weightInPound) {
         this.firstName=firstName;
         this.lastName=lastName;
         this.gender=gender;
         this.dateOfBirth=dateOfBirth;
+        this.heightInInches=heightInInches;
+        this.weightInPound=weightInPound;
     }
 
 
@@ -59,5 +60,9 @@ public class HealthProfile {
 
     public int getWeightInPound() {
         return weightInPound;
+    }
+
+    public int getDateOfBirth() {
+        return new HeartRates(firstName, lastName, dateOfBirth).getAgeInYears();
     }
 }
