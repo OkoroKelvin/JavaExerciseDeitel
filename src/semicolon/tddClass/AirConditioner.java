@@ -1,11 +1,11 @@
-package africa.semicolon.tddClass;
+package semicolon.tddClass;
 
 public class AirConditioner {
     private boolean isOn;
     private String productName;
     private int temperature = 16;
 
-    public AirConditioner(boolean isOn, String productName, int temperature){
+    public AirConditioner(boolean isOn, String productName, int temperature) {
         this.isOn = isOn;
         this.productName = productName;
         this.temperature = temperature;
@@ -15,9 +15,12 @@ public class AirConditioner {
         return isOn;
     }
 
-    public boolean setOn() {
-        isOn = true;
-        return true;
+    public void setOn() {
+        if (isOn == false) {
+            isOn = true;
+        } else {
+            isOn = false;
+        }
     }
 
     public String getProductName() {
@@ -30,9 +33,9 @@ public class AirConditioner {
     }
 
     public void setProductName(String newProductName) {
-        if( isOn == true) {
+        if (isOn == true) {
             productName = newProductName;
-        }else {
+        } else {
             System.out.println("please turn on airConditioner ! before you can set name ");
         }
 
@@ -44,21 +47,20 @@ public class AirConditioner {
 
 
     public void setTemperature(int newTemperature) {
-        if( isOn == true){
-        if(newTemperature >= 16 && newTemperature <= 30){
-        temperature=newTemperature;
-        } else {
-            System.out.print("Please set temperature between 16 and 30");
-        }
+        if (isOn == true) {
+            if (newTemperature >= 16 && newTemperature <= 30) {
+                temperature = newTemperature;
+            } else {
+                System.out.print("Please set temperature between 16 and 30");
+            }
         }
     }
-
 
 
     public void decreaseTemperature() {
         if (isOn == true) {
             if (temperature > 16) {
-                temperature= temperature-1;
+                temperature = temperature - 1;
             } else {
                 System.out.println("Temperature cant go below 16");
             }
@@ -66,21 +68,15 @@ public class AirConditioner {
     }
 
 
-
     public void increaseTemperature() {
-        if( isOn == true) {
+        if (isOn == true) {
             if (temperature < 30) {
-                temperature= temperature+1;
+                temperature = temperature + 1;
             } else {
                 System.out.println("Temperature cant go above 30");
             }
         }
 
     }
-
-    public void powerOff() {
-        if(isOn)
-        {isOn = false;temperature=0;
-        }
-    }
 }
+

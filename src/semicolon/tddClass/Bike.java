@@ -1,4 +1,4 @@
-package africa.semicolon.tddClass;
+package semicolon.tddClass;
 
 public class Bike {
     private int speedInKmPerHour;
@@ -10,7 +10,6 @@ public class Bike {
             speedInKmPerHour = newSpeedInKmPerHour;
         }
     }
-
 
     public int getSpeedInKmPerHour() {
         return speedInKmPerHour;

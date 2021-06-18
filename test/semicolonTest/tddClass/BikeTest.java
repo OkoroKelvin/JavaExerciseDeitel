@@ -10,14 +10,11 @@ Requirements:
 5. The Bike is allowed to set Speed Only for testing to Stimulate accleration/decelearation.
  */
 
-import africa.semicolon.tddClass.Bike;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import semicolon.tddClass.Bike;
 
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BikeTest {
     private Bike okada;

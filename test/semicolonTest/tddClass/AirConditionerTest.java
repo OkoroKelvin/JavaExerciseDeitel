@@ -1,8 +1,8 @@
 package semicolonTest.tddClass;
 
-import africa.semicolon.tddClass.AirConditioner;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import semicolon.tddClass.AirConditioner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,22 +17,22 @@ class AirConditionerTest {
 
 
     @Test
-    public void testThePresentStateOfTheAirConditioner() {
+    public void testOnAndOffStateOfTheAirConditioner() {
         boolean response = scanfrost.isOn();
-        assertFalse(response);
+        scanfrost.setOn();
+        assertTrue(scanfrost.isOn() == true);
 
-        boolean response2 = scanfrost.setOn();
-        assertTrue(response2);
+       boolean response3 = scanfrost.isOn();
+        scanfrost.setOn();
+        assertTrue(scanfrost.isOn() == false);
 
-        boolean response3 = scanfrost.isOn();
-        assertTrue(response3);
-        scanfrost.powerOff();
+        boolean response4= scanfrost.isOn();
+        System.out.println(response4);
     }
-
     @Test
     public void testAirConditionHasANameAndCanBeConfigured() {
-        testThePresentStateOfTheAirConditioner();
-        assertTrue(scanfrost.setOn());
+        testOnAndOffStateOfTheAirConditioner();
+       scanfrost.setOn();
         String response = scanfrost.getProductName();
         assertEquals("scanfrostHD", response);
 
@@ -45,12 +45,12 @@ class AirConditionerTest {
         scanfrost.setProductName("coolestSplit");
         String response3 = scanfrost.getProductName();
         assertEquals("coolestSplit", response3);
-        scanfrost.powerOff();
+        //scanfrost.powerOff();
     }
     @Test
     public void testToSetAndGetTemperature(){
         scanfrost.setOn();
-        assertTrue(scanfrost.setOn());
+        scanfrost.setOn();
         int response1 = scanfrost.getTemperature();
         assertEquals(16, response1);
 
@@ -61,13 +61,12 @@ class AirConditionerTest {
         scanfrost.setTemperature(30);
         int response3= scanfrost.getTemperature();
         assertEquals(30,response3);
-        scanfrost.powerOff();
+        //scanfrost.powerOff();
     }
 
     @Test
     public void testToIncreaseTemperature() {
         scanfrost.setOn();
-        assertTrue(scanfrost.setOn());
         scanfrost.increaseTemperature();
         assertEquals(17, scanfrost.getTemperature());
 
@@ -79,9 +78,7 @@ class AirConditionerTest {
         scanfrost.setTemperature(29);
         scanfrost.increaseTemperature();
         assertEquals(30, scanfrost.getTemperature());
-        //scanfrost.increaseTemperature();
-        //assertEquals(30, scanfrost.getTemperature());
-        scanfrost.powerOff();
+        //scanfrost.powerOff();
     }
 
     @Test
@@ -101,15 +98,13 @@ class AirConditionerTest {
         assertEquals(26,scanfrost.getTemperature());
         scanfrost.setTemperature(16);
         assertEquals(16,scanfrost.getTemperature());
-  //      scanfrost.decreaseTemperature();
-   //     assertEquals(16,scanfrost.getTemperature());
-        scanfrost.powerOff();
+        //scanfrost.powerOff();
     }
     @Test
     public void testToPowerOffAirCondition(){
        scanfrost.setOn();
-        scanfrost.powerOff();
-        assertEquals(0,scanfrost.getTemperature());
+        scanfrost.setOn();
+        assertTrue(scanfrost.isOn() == false);
 
     }
 
