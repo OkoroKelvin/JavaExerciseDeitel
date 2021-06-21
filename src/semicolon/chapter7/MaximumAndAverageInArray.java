@@ -12,6 +12,7 @@ public class MaximumAndAverageInArray {
 
     public double calculateTheAverage(int[] numbers) {
         int sum = 0;
+
         double average;
         for (int count = 0; count < numbers.length; count++) {
             sum += numbers[count];
