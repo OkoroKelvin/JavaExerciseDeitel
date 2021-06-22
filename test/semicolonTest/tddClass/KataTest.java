@@ -130,4 +130,17 @@ class KataTest {
         Kata.calculateAverage(numbers);
         assertEquals(5.2,Kata.calculateAverage(numbers));
     }
+    @Test
+    public void testToKnowTheLargestSumArray(){
+        int[] numbers = {2, 3, 5, 6, 7, 8, 9, 5, 4, 3};
+        Kata.largestSumOfArray(numbers);
+        assertEquals(50,Kata.largestSumOfArray(numbers));
+    }
+    @Test
+    public void testToKnowTheSmallestSumArray(){
+        int[] numbers = {2, 3, 5, 6, 7, 8, 9, 5, 4, 3};
+        Kata.smallestSumOfArray(numbers);
+        assertEquals(43,Kata.smallestSumOfArray(numbers));
+    }
+
 }

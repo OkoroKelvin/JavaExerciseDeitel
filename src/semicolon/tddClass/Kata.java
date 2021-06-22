@@ -195,4 +195,31 @@ public class Kata {
         average = sum * 1.0 / numbers.length;
         return average;
     }
+
+
+    public static int largestSumOfArray(int [] numbers) {
+//        return sumOfValuesInArray(numbers) - findMinimumNumber(numbers);
+        int largestSum = sumOfValuesInArray(numbers) - numbers[0];
+        int temporalLargest = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            temporalLargest = sumOfValuesInArray(numbers) - numbers[i];
+            if(temporalLargest > largestSum){
+                largestSum = temporalLargest;
+            }
+        }
+        return largestSum;
+    }
+
+    public static int smallestSumOfArray(int[] numbers) {
+        int smallestSum = sumOfValuesInArray(numbers) - numbers[0];
+        int temporalSmallest =0;
+        for (int i = 0; i < numbers.length; i++){
+            temporalSmallest= sumOfValuesInArray(numbers)-numbers[i];
+            if(temporalSmallest < smallestSum){
+                smallestSum=temporalSmallest;
+            }
+        }
+        return smallestSum;
+    }
+
 }
