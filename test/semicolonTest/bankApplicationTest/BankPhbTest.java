@@ -1,4 +1,5 @@
 package semicolonTest.bankApplicationTest;
 
-public class projectAccountTest {
+public class BankPhbTest {
+
 }
