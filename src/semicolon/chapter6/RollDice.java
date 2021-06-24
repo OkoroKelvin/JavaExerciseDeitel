@@ -2,7 +2,7 @@ package semicolon.chapter6;
 
 import java.security.SecureRandom;
 
-public class RollDie {
+public class RollDice {
     public static void main(String[] args) {
         SecureRandom randomNumbers = new SecureRandom();
 
