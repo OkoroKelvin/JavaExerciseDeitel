@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import semicolon.bankApplication.ProjectAccount;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class ProjectAccountTest {
     ProjectAccount myAccount;
@@ -25,6 +26,18 @@ public class ProjectAccountTest {
     public void testThatUserCanWithdrawAmount(){
         myAccount.withdraw(500);
         assertEquals(500,myAccount.getAccountBalance());
+    }
+    @Test
+    public void testToCreateAccountNumberUponCreationOfAccount(){
+        ProjectAccount myAccount2 = new ProjectAccount();
+        assertNotEquals(myAccount,myAccount2);
+    }
+    @Test
+    public void testToTransferMoneyFromOneAccountToAnotherAccount(){
+        ProjectAccount myAccount2 = new ProjectAccount();
+        myAccount.deposit(3000);
+        myAccount.transfer(3000,myAccount2);
+        System.out.println(myAccount2.getAccountBalance());
     }
 
 }
