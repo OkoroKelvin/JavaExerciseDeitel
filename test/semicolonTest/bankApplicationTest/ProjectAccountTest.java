@@ -39,5 +39,9 @@ public class ProjectAccountTest {
         myAccount.transfer(3000,myAccount2);
         System.out.println(myAccount2.getAccountBalance());
     }
+    @Test
+    void testThatAccountHasNumber(){
+        assertEquals(1, myAccount.getAccountNumber());
+    }
 
 }

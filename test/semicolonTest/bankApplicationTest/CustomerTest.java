@@ -48,6 +48,12 @@ ProjectAccount account1;
         double amountToWithdraw = 200;
         customer1.withdraw(amountToWithdraw);
         assertEquals(300,customer1.getBalance());
+        System.out.println(customer1.toString());
+    }
+    @Test
+    void testThatCustomerHasAccountNumber(){
+        customer1.getAccountNumber();
+        assertEquals(1,customer1.getAccountNumber());
     }
 
 }

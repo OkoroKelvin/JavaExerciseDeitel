@@ -1,5 +1,15 @@
 package semicolonTest.bankApplicationTest;
 
-public class BankWinnerTest {
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
+class BankWinnerTest {
+
+    @BeforeEach
+    void setUp() {
+    }
+    @Test
+    void testToCreatCustomers(){
+
+    }
 }

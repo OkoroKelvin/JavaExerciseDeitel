@@ -34,14 +34,6 @@ public class ProjectAccount {
         return myAccountBalance;
     }
 
-    @Override
-    public String toString() {
-        return "ProjectAccount{" +
-                "myAccountBalance=" + myAccountBalance +
-                ", accountNumber=" + accountNumber +
-                '}';
-    }
-
     public void transfer(int amountToTransfer, ProjectAccount nameOfAccount) {
         if (amountToTransfer >= 0.00) {
             if (amountToTransfer < myAccountBalance) {
@@ -53,5 +45,9 @@ public class ProjectAccount {
         } else {
             System.out.println("Kindly enter valid amount");
         }
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
     }
 }

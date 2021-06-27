@@ -15,6 +15,12 @@ public class Customer {
         this.account = account;
     }
 
+//    public Customer(String lastName, String firstName, String phoneNumber) {
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//        this.phoneNumber = phoneNumber;
+//    }
+
     public void setFirstName(String fName) {
         firstName = fName;
     }
@@ -45,6 +51,14 @@ public class Customer {
         transferAccount.deposit(amountToTransfer);
     }
 
+    @Override
+    public String toString() {
+        System.out.println("--------------------------------------------------------------------------------------");
+        return "First Name-> " + firstName + "  Last Name-> "+ lastName + "  Account Number-> " + account.getAccountNumber() + "  Phone Number-> " + phoneNumber;
+
+
+    }
+
     public void deposit(int amountToDeposit) {
         account.deposit(amountToDeposit);
     }
@@ -56,4 +70,10 @@ public class Customer {
     public void withdraw(double amountToWithdraw) {
         account.withdraw(amountToWithdraw);
     }
+
+    public int getAccountNumber() {
+        int accountNumber= account.getAccountNumber();
+        return accountNumber;
+    }
 }
+
