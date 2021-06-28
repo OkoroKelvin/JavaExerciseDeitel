@@ -43,8 +43,8 @@ public class BankWinner {
 
     public static ArrayList<Customer> createCustomers(Customer customer1) {
         customer = customer1;
-        for(Customer customer2 : customersList){
-            if(customer.getAccountNumber()==customer2.getAccountNumber())throw new NullPointerException(
+        for(Customer customer : customersList){
+            if(customer.getAccountNumber()==customer.getAccountNumber())throw new NullPointerException(
                     "This Account already Exist"
             );
         }

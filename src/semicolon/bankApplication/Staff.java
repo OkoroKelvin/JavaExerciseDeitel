@@ -7,13 +7,11 @@ public class Staff {
 
     public Staff(String uName, int password) {
         userName = uName;
-        pinCode  = password;
+        pinCode = password;
     }
 
 
     public static void staffMenu() {
-
-
         String format = """
                 press from number 1 to 3 to proceed
 
@@ -44,7 +42,7 @@ public class Staff {
 
     public void viewAccounts() {
         System.out.println("These are the");
-        for(int i=0; i<BankWinner.getCustomersList().size(); i++){
+        for (int i = 0; i < BankWinner.getCustomersList().size(); i++) {
             Customer customer = BankWinner.getCustomersList().get(i);
 
             String firstName = customer.getFirstName();
@@ -53,10 +51,23 @@ public class Staff {
             int accountNumber = customer.getAccountNumber();
             double balance = customer.getBalance();
 
-            System.out.println("Account Name: " );
+            System.out.println("Account Name: " + firstName + " " + lastName);
+            System.out.println("Phone Number: " + phoneNumber);
+            System.out.println("Account Balance: " + balance);
+            System.out.println("Account Number: " + accountNumber);
         }
-        //System.out.println(BankWinner.customersList);
+
+
     }
+    public void deleteAccount(String phoneNumber) {
+      for (int i = 0; 1 < BankWinner.getCustomersList().size();i++){
+          Customer customer = BankWinner.getCustomersList().get(i);
+          if(customer.getPhoneNumber().equals(phoneNumber)){
+              BankWinner.getCustomersList().remove(customer);
+          }
+
+    }
+}
 
 
 
