@@ -90,23 +90,24 @@ public class TurtleTest {
     //todo facing west and facing north;
 
     @Test
-    void turtleCanTurnRightWhenFacingWest(){
+    void turtleCanTurnRightWhenFacingWest() {
         Turtle ijapa = new Turtle();
         ijapa.turnRight();
         ijapa.turnRight();
         assertSame(Direction.WEST, ijapa.getDirection());
         ijapa.turnRight();
-       assertSame(Direction.NORTH,ijapa.getDirection());
+        assertSame(Direction.NORTH, ijapa.getDirection());
     }
+
     @Test
-    void turtleCanTurnRightWhenFacingNorth(){
+    void turtleCanTurnRightWhenFacingNorth() {
         Turtle ijapa = new Turtle();
         ijapa.turnRight();
         ijapa.turnRight();
         ijapa.turnRight();
-        assertSame(Direction.NORTH,ijapa.getDirection());
+        assertSame(Direction.NORTH, ijapa.getDirection());
         ijapa.turnRight();
-        assertSame(Direction.EAST,ijapa.getDirection());
+        assertSame(Direction.EAST, ijapa.getDirection());
     }
 
 
@@ -119,31 +120,33 @@ public class TurtleTest {
     }
 
     @Test
-    void turtleCanTurnLeftWhileFacingNorth(){
+    void turtleCanTurnLeftWhileFacingNorth() {
         Turtle ijapa = new Turtle();
         ijapa.turnLeft();
         assertSame(NORTH, ijapa.getDirection());
         ijapa.turnLeft();
-        assertSame(WEST,ijapa.getDirection());
+        assertSame(WEST, ijapa.getDirection());
     }
+
     @Test
-    void turtleCanTurnLeftWhileFacingWest(){
+    void turtleCanTurnLeftWhileFacingWest() {
         Turtle ijapa = new Turtle();
         ijapa.turnLeft();
         ijapa.turnLeft();
-        assertSame(WEST,ijapa.getDirection());
+        assertSame(WEST, ijapa.getDirection());
         ijapa.turnLeft();
-        assertSame(SOUTH,ijapa.getDirection());
+        assertSame(SOUTH, ijapa.getDirection());
     }
+
     @Test
-    void turtleCanTurnLeftWhileFacingSouth(){
+    void turtleCanTurnLeftWhileFacingSouth() {
         Turtle ijapa = new Turtle();
         ijapa.turnLeft();
         ijapa.turnLeft();
         ijapa.turnLeft();
-        assertSame(SOUTH,ijapa.getDirection());
+        assertSame(SOUTH, ijapa.getDirection());
         ijapa.turnLeft();
-        assertSame(EAST,ijapa.getDirection());
+        assertSame(EAST, ijapa.getDirection());
     }
 
     @Test
@@ -176,7 +179,51 @@ public class TurtleTest {
 
     }
 
+    @Test
+    void turtleCanMoveForwardWhileFacingWestTest() {
+        Turtle ijapa = new Turtle();
+        assertSame(EAST, ijapa.getDirection());
+        ijapa.move(5);
+        ijapa.turnLeft();
+        ijapa.turnLeft();
 
+        TurtlePosition position = ijapa.getTurtlePosition();
+        assertEquals(5, position.getColumnPosition());
+        assertEquals(0, position.getRowPosition());
+        assertSame(WEST, ijapa.getDirection());
+
+        //when
+        ijapa.move(5);
+        //assert
+        TurtlePosition newPosition = ijapa.getTurtlePosition();
+        assertEquals(0, newPosition.getColumnPosition());
+        assertEquals(0, newPosition.getRowPosition());
+    }
+
+    @Test
+    public void turtleCanWriteEastWardWhenPenIsDown(){
+        //given
+        Sketchpad sketchpad = new Sketchpad(20,20);
+        Turtle ijapa = new Turtle();
+        ijapa.penDown();
+        //when
+        ijapa.move(5, sketchpad);
+
+        assertEquals(1,sketchpad.getFloor()[0][0]);
+        assertEquals(1,sketchpad.getFloor()[0][1]);
+        assertEquals(1,sketchpad.getFloor()[0][2]);
+        assertEquals(1,sketchpad.getFloor()[0][3]);
+        assertEquals(1,sketchpad.getFloor()[0][4]);
+        assertEquals(0,sketchpad.getFloor()[0][5]);
+
+
+
+        TurtlePosition position = ijapa.getTurtlePosition();
+        assertEquals(4, position.getColumnPosition());
+        assertEquals(0, position.getRowPosition());
+
+
+    }
 }
 
 

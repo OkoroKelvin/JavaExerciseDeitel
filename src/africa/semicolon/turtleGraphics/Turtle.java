@@ -65,6 +65,24 @@ public class Turtle {
     }
 
     public void move(int numberOfSteps) {
-        if(currentDirection == EAST) myPosition.increaseColumnPositionBy(myPosition.getColumnPosition()+numberOfSteps);
+        if(currentDirection == EAST) myPosition.increaseColumnPositionBy(myPosition.getColumnPosition()+numberOfSteps-1);
+        if(currentDirection == WEST) myPosition.decreaseColumnPositionBy(numberOfSteps);
+    }
+
+    public void move(int numberOfSteps, Sketchpad sketchpad) {
+        int columnPosition = myPosition.getColumnPosition();
+        int rowPosition = myPosition.getRowPosition();
+        if(pen.getPosition().equals(DOWN)){
+            switch (currentDirection){
+                case EAST -> {
+                    for(int i = columnPosition;i < columnPosition + numberOfSteps ; i++) {
+                        sketchpad.getFloor()[rowPosition][i] = 1;
+                    }
+
+
+                }
+            }
+        }
+        move(numberOfSteps);
     }
 }
