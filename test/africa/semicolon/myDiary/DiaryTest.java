@@ -28,7 +28,7 @@ public class DiaryTest {
     }
     @Test
     public void diaryCanAddEntries(){
-        Diary diary = new Diary ( "Blesssing Diary");
+        Diary diary = new Diary ( "Blessing Diary");
         diary.addEntry("The Love","Go placidly amidst the odd");
         assertEquals(1, diary.getNumberOfEntries());
 

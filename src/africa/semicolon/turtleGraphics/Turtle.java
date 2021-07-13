@@ -1,0 +1,70 @@
+package africa.semicolon.turtleGraphics;
+
+import static africa.semicolon.turtleGraphics.Direction.*;
+import static africa.semicolon.turtleGraphics.PenPosition.DOWN;
+import static africa.semicolon.turtleGraphics.PenPosition.UP;
+
+public class Turtle {
+    private Pen pen;
+    private Direction currentDirection;
+    private TurtlePosition myPosition;
+
+    public Turtle() {
+        pen = new Pen();
+        currentDirection = Direction.EAST;
+        myPosition = new TurtlePosition();
+    }
+
+    public void setPen(Pen biro) {
+        pen = biro;
+    }
+
+    public Pen getPen() {
+        return pen;
+    }
+
+    public void penDown() {
+        pen.setPosition(DOWN);
+    }
+
+    public PenPosition getPenPosition() {
+        return pen.getPosition();
+    }
+
+    public void penUp() {
+        pen.setPosition(UP);
+    }
+
+    public Direction getDirection() {
+        return currentDirection;
+    }
+
+    public void turnRight() {
+        if(currentDirection == WEST) currentDirection = NORTH;
+
+        else if(currentDirection == NORTH) currentDirection = EAST;
+
+        else if(currentDirection == EAST) currentDirection = SOUTH;
+
+        else if(currentDirection == SOUTH) currentDirection = WEST;
+    }
+
+
+    public void turnLeft() {
+        if(currentDirection == EAST) currentDirection = NORTH;
+        else if (currentDirection == NORTH) currentDirection = WEST;
+        else if (currentDirection == WEST) currentDirection = SOUTH;
+        else if (currentDirection == SOUTH) currentDirection = EAST;
+
+
+
+    }
+
+    public TurtlePosition getTurtlePosition() {
+        return myPosition;
+    }
+
+    public void move(int numberOfSteps) {
+        if(currentDirection == EAST) myPosition.increaseColumnPositionBy(myPosition.getColumnPosition()+numberOfSteps);
+    }
+}
