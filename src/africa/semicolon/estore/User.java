@@ -1,6 +1,6 @@
 package africa.semicolon.estore;
 
-public class Users {
+public class User {
     private int age;
     private String email;
     private String name;
@@ -8,7 +8,7 @@ public class Users {
     private String phone;
     private Address homeAddress;
 
-    public Users(int age, String email, String name, String password, String phone, Address homeAddress) {
+    public User(int age, String email, String name, String password, String phone, Address homeAddress) {
         this.age = age;
         this.email = email;
         this.name = name;

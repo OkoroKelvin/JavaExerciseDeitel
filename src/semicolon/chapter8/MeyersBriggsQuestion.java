@@ -124,11 +124,3 @@
 //
 //
 //}
-//
-//
-//
-//    }
-//    public static String placeCheckmark(int num, int position){
-//        return (num ==1 && position ==1) || (num == 0 && position ==2) ? String.format("%c", '\u2713') : "";
-//    }
-//}
