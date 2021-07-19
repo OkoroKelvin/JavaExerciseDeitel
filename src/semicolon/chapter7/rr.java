@@ -1,16 +1,17 @@
 package semicolon.chapter7;
 
+import java.util.Scanner;
+
 public class rr {
     public static void main(String[] args) {
-        int see = 13;
-        int ss =50;
+        Scanner input = new Scanner(System.in);
+        int count = input.nextInt();
+       int fact = 1;
+       for(; count >=1; count--){
 
-
-        double hh = ss % see;
-        double ff = ss / see;
-        System.out.println(hh);
-        System.out.println(ff);
-
+           fact*=count;
+       }
+        System.out.println(fact);
 
     }
 }
