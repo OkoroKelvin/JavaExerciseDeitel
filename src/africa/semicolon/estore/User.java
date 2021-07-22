@@ -1,14 +1,21 @@
 package africa.semicolon.estore;
 
 public class User {
-    int age;
-    String emailAddress;
-    String name;
-    String password;
-    String phone;
-    Address homeAddress;
+    private int age;
+    private String emailAddress;
+    private String name;
+    private String password;
+    private String phone;
+    private Address homeAddress;
 
-
+    public User(int age, String emailAddress, String name, String password, String phone, Address homeAddress) {
+        this.age = age;
+        this.emailAddress = emailAddress;
+        this.name = name;
+        this.password = password;
+        this.phone = phone;
+        this.homeAddress = homeAddress;
+    }
 
     public int getAge() {
         return age;

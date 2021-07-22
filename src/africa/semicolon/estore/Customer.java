@@ -9,12 +9,7 @@ public class Customer extends User {
     private ArrayList <BillingInformation> billingInformation = new ArrayList<>();
 
     public Customer(int age, String email, String name, String password, String phone, Address homeAddress) {
-        this.age = age;
-        this.emailAddress = emailAddress;
-        this.name = name;
-        this.password = password;
-        this.phone = phone;
-        this.homeAddress = homeAddress;
+        super(age, email, name,password, phone, homeAddress);
     }
 
 

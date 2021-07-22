@@ -1,13 +1,10 @@
 package africa.semicolon.estore;
 
 public class Seller extends User{
-    public Seller (int age, String emailAddress, String name, String password, String phone, Address homeAddress){
-        this.age = age;
-        this.emailAddress = emailAddress;
-        this.name= name;
-        this.password = password;
-        this.phone = phone;
-        this.homeAddress = homeAddress;
+
+
+    public Seller(int age, String emailAddress, String name, String password, String phone, Address homeAddress) {
+        super(age, emailAddress, name, password, phone, homeAddress);
     }
 
     @Override
