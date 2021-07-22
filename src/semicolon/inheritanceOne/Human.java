@@ -1,7 +1,7 @@
 //package semicolon.inheritanceOne;
 //
 //public class Human {
-//    private Dog myPet = new Dog();
+//    private Car myPet = new Car();
 //
 //    public void cuddle(){
 //        myPet.cuddle();

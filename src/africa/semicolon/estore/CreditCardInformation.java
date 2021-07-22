@@ -1,6 +1,6 @@
 package africa.semicolon.estore;
 
-public class creditCardInformation {
+public class CreditCardInformation {
     private int Cvv;
     private int cardExpiration;
     private String creditCardNumber;

@@ -10,9 +10,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 public class ProjectAccountTest {
     ProjectAccount myAccount;
 
+
     @BeforeEach
     void setUp(){
-        myAccount= new ProjectAccount();
+        myAccount= new ProjectAccount("Oko");
     }
     @Test
     public void testThatAccountCanDeposit(){
@@ -29,12 +30,12 @@ public class ProjectAccountTest {
     }
     @Test
     public void testToCreateAccountNumberUponCreationOfAccount(){
-        ProjectAccount myAccount2 = new ProjectAccount();
+        ProjectAccount myAccount2 = new ProjectAccount("");
         assertNotEquals(myAccount,myAccount2);
     }
     @Test
     public void testToTransferMoneyFromOneAccountToAnotherAccount(){
-        ProjectAccount myAccount2 = new ProjectAccount();
+        ProjectAccount myAccount2 = new ProjectAccount("");
         myAccount.deposit(3000);
         myAccount.transfer(3000,myAccount2);
         System.out.println(myAccount2.getAccountBalance());

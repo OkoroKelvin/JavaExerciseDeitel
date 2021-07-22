@@ -1,23 +1,14 @@
 package africa.semicolon.estore;
 
-import java.util.ArrayList;
-
-public class Customer extends User {
-
-    private ShoppingCart shoppingCart;
-
-    private ArrayList <BillingInformation> billingInformation = new ArrayList<>();
-
-    public Customer(int age, String email, String name, String password, String phone, Address homeAddress) {
+public class Admin extends User{
+    public Admin(int age, String emailAddress, String name, String password, String phone, Address homeAddress){
         this.age = age;
         this.emailAddress = emailAddress;
-        this.name = name;
+        this.name= name;
         this.password = password;
         this.phone = phone;
         this.homeAddress = homeAddress;
     }
-
-
 
     @Override
     public int getAge() {
@@ -79,12 +70,4 @@ public class Customer extends User {
         super.setHomeAddress(homeAddress);
     }
 
-
-    public ShoppingCart getShoppingCart() {
-        return shoppingCart;
-    }
-
-    public void setShoppingCart(ShoppingCart shoppingCart) {
-        this.shoppingCart = shoppingCart;
-    }
 }

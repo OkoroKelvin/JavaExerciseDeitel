@@ -1,6 +1,8 @@
 package africa.semicolon.estore;
 
+import java.util.ArrayList;
+
 public class ShoppingCart{
-    private Item items;
+   private ArrayList<Item> items = new ArrayList<>();
 
 }

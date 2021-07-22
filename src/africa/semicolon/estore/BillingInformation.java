@@ -1,12 +1,14 @@
 package africa.semicolon.estore;
 
 public class BillingInformation{
-    private String receiverPhoneNumber;
-    private String receiverName;
-    private String deliveryAddress;
-    private creditCardInformation creditCardInformation;
+    private Customer customer;
+    private CreditCardInformation creditCardInformation;
 
-
-
+    public String getPhoneNumber (){
+        return customer.getPhone();
+    }
+    public Address getDeliveryAddress(){
+        return customer.getHomeAddress();
+    }
 
 }

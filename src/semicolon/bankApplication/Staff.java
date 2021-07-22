@@ -4,11 +4,13 @@ public class Staff {
 
     public int pinCode;
     private String userName;
+    private boolean isLogin;
 
     public Staff(String uName, int password) {
         userName = uName;
         pinCode = password;
     }
+    public Staff (){}
 
 
     public static void staffMenu() {
@@ -40,64 +42,37 @@ public class Staff {
         return userName;
     }
 
-    public void viewAccounts() {
-        System.out.println("These are the");
-        for (int i = 0; i < BankWinner.getCustomersList().size(); i++) {
-            Customer customer = BankWinner.getCustomersList().get(i);
-
-            String firstName = customer.getFirstName();
-            String lastName = customer.getLastName();
-            String phoneNumber = customer.getPhoneNumber();
-            int accountNumber = customer.getAccountNumber();
-            double balance = customer.getBalance();
-
-            System.out.println("Account Name: " + firstName + " " + lastName);
-            System.out.println("Phone Number: " + phoneNumber);
-            System.out.println("Account Balance: " + balance);
-            System.out.println("Account Number: " + accountNumber);
-        }
-
-
+    public void setIsLogin(boolean isLogin){
+        this.isLogin = isLogin;
     }
-    public void deleteAccount(String phoneNumber) {
-      for (int i = 0; 1 < BankWinner.getCustomersList().size();i++){
-          Customer customer = BankWinner.getCustomersList().get(i);
-          if(customer.getPhoneNumber().equals(phoneNumber)){
-              BankWinner.getCustomersList().remove(customer);
-          }
+    public boolean getIsLogin(){return this.isLogin;};
 
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//    public void viewAccounts() {
+//        System.out.println("These are the");
+//        for (int i = 0; i < BankWinner.getCustomersList().size(); i++) {
+//            Customer customer = BankWinner.getCustomersList().get(i);
+//
+//            String firstName = customer.getFirstName();
+//            String lastName = customer.getLastName();
+//            String phoneNumber = customer.getPhoneNumber();
+//
+//
+//            System.out.println("Account Name: " + firstName + " " + lastName);
+//            System.out.println("Phone Number: " + phoneNumber);
+//
+//        }
+//
+//
+//    }
+//    public void deleteAccount(String phoneNumber) {
+//      for (int i = 0; 1 < BankWinner.getCustomersList().size();i++){
+//          Customer customer = BankWinner.getCustomersList().get(i);
+//          if(customer.getPhoneNumber().equals(phoneNumber)){
+//              BankWinner.getCustomersList().remove(customer);
+//          }
+//
+//    }
+//}
 
 //        for(Customer cust :BankWinner.customersList){
 //            String fstName = cust.getFirstName();

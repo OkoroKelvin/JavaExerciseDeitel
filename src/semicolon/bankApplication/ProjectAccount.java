@@ -4,21 +4,21 @@ import java.util.Scanner;
 
 public class ProjectAccount {
     Scanner input = new Scanner(System.in);
-
+    private String accountName;
     private double myAccountBalance = 0.0;
     private static int accountNumberProvider = 0;
     private final int accountNumber;
 
-    public ProjectAccount() {
+    public ProjectAccount(String accountName) {
         accountNumberProvider++;
         accountNumber = accountNumberProvider;
+        this.accountName = accountName;
     }
 
 
     public void deposit(double amountToDeposit) {
         if (amountToDeposit > 0)
             myAccountBalance = myAccountBalance + amountToDeposit;
-
     }
 
     public double getAccountBalance() {
@@ -49,5 +49,13 @@ public class ProjectAccount {
 
     public int getAccountNumber() {
         return accountNumber;
+    }
+
+    public String getAccountName(){
+        return this.accountName;
+    }
+
+    public void setAccountName(String name){
+        this.accountName =name;
     }
 }
