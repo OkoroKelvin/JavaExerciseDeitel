@@ -6,39 +6,54 @@ public class CreditCardNumberValidation {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Kindly input Card Number");
-        //String cardNumber = input.next();
-        //long newCardNumber = Long.parseLong(cardNumber);
-        long newCardNumber = input.nextLong();
-        System.out.println(sumOfDoubleEvenPlace(newCardNumber));
-
-
+        long cardNumber = input.nextLong();
+        isValid(cardNumber);
     }
 
-    public static int sumOfDoubleEvenPlace(long newCardNumber) {
-        // System.out.println(cardNumber.length());
-        String cardNumber = Long.toString(newCardNumber);
-        long divisor = (long) Math.pow(10, cardNumber.length() - 1);
-        int digit;
+    public static int sumOfDoubleEvenPlace(long cardNumber) {
+        String stringCardNumber = Long.toString(cardNumber);
+        long divisor = (long) Math.pow(10, stringCardNumber.length() - 1);
+        int singleCardNumberDigits;
         int totalA = 0;
         int totalB = 0;
         while (divisor > 0) {
-            digit = (int) (newCardNumber / divisor % 10L);
-            int newDigit = digit * 2;
-            if (newDigit > 9) {
-                int savedNumber = newDigit / 10;
-                int savedNumber2 = newDigit % 10;
+            singleCardNumberDigits = (int) (cardNumber / divisor % 10L);
+            int newSingleCardNumberDigits = singleCardNumberDigits * 2;
+            if (newSingleCardNumberDigits > 9) {
+                int savedNumber = newSingleCardNumberDigits / 10;
+                int savedNumber2 = newSingleCardNumberDigits % 10;
                 int sum = savedNumber + savedNumber2;
-                System.out.println("sum"+sum);
-                System.out.println(totalA = +sum);
+                totalA = totalA + sum;
             }
-            if (newDigit <= 9) {
-                System.out.println("newDigit"+newDigit);
-                System.out.println("Sum"+(totalB = +newDigit));
+            if (newSingleCardNumberDigits <= 9) {
+                totalB = totalB + newSingleCardNumberDigits;
             }
             divisor /= 100;
         }
         return totalA + totalB;
     }
+
+    public static int sumOfOddPlace(long cardNumber) {
+        String stringCardNumber = Long.toString(cardNumber);
+        long divisor = (long) Math.pow(10, stringCardNumber.length() - 2);
+        int digit;
+        int totalA = 0;
+        while (divisor > 0) {
+            digit = (int) (cardNumber / divisor % 10L);
+            totalA = totalA + digit;
+            divisor /=100;
+        }
+        return totalA;
+    }
+    public static boolean isValid(long cardNumber){
+        int sumEvenAndOdd= sumOfDoubleEvenPlace(cardNumber) + sumOfOddPlace(cardNumber);
+        if(sumEvenAndOdd % 10 == 0){
+            System.out.println(cardNumber+" is Valid");
+        }else if(sumEvenAndOdd % 10 != 0)
+            System.out.println(cardNumber+" is invalid");;
+        return false;
+    }
 }
+
 
 
