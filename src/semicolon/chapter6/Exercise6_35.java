@@ -18,32 +18,37 @@ user answers the question correctly.
 public class Exercise6_35 {
     private static Scanner input = new Scanner(System.in);
     private static SecureRandom randomNumbers = new SecureRandom();
-    static int userInput;
     static int randomValue;
     static int randomValue2;
-    private static int newRandomValue;
+    static int userMyInput;
+    //private static int totalRandomValue= randomValue * randomValue2;;
 
     public static void main(String... args) {
-
         String prompt = """
                 Welcome to the the application of multiplication
                 """;
         newQuestions();
+        userMyInput = input.nextInt();
+        int totalRandomValue = randomValue * randomValue2;
+        answerToQuestion(userMyInput, totalRandomValue);
     }
 
     public static void newQuestions() {
         randomValue = 1 + randomNumbers.nextInt(9);
         randomValue2 = 1 + randomNumbers.nextInt(9);
         System.out.println("How much is " + randomValue + " times " + randomValue2 + " ?");
-        answerToQuestion(userInput, randomValue * randomValue2);
+        userMyInput = input.nextInt();
+        answerToQuestion(userMyInput, randomValue * randomValue2);
     }
 
     public static void answerToQuestion(int userInput, int totalRandomValues) {
         if (userInput == totalRandomValues) {
             System.out.println("Good work!");
             newQuestions();
+//            main();
 
         } else {
+            // userInput = input.nextInt();
             System.out.println("Try again");
             userInput = input.nextInt();
             answerToQuestion(userInput, randomValue * randomValue2);
@@ -51,3 +56,53 @@ public class Exercise6_35 {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    public static void newQuestions() {
+//        randomValue = 1 + randomNumbers.nextInt(9);
+//        randomValue2 = 1 + randomNumbers.nextInt(9);
+//        System.out.println("How much is " + randomValue + " times " + randomValue2 + " ?");
+//        answerToQuestion(userInput, randomValue * randomValue2);
+//    }
+//
+//    public static void answerToQuestion(int userInput, int totalRandomValues) {
+//        if (userInput == totalRandomValues) {
+//            System.out.println("Good work!");
+//            newQuestions();
+//
+//        } else {
+//            userInput = input.nextInt();
+//            System.out.println("Try again");
+//            //userInput = input.nextInt();
+//            answerToQuestion(userInput, randomValue * randomValue2);
+//
+//        }
+//    }
+//}
