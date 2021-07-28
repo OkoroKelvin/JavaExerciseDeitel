@@ -1,4 +1,5 @@
 package semicolon.chapter8;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MeyersBriggsQuestion {
@@ -74,6 +75,7 @@ public class MeyersBriggsQuestion {
         System.out.println("\nYour choice at a glance\n");
         System.out.printf("|%5s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s | %3s |%n", " ", "A", "B",
                 " ", "A", "B", " ", "A", "B", " ", "A", "B");
+        System.out.println(Arrays.toString(questionResponses));
         System.out.printf("%s%n", "-".repeat(74));
     }
 
@@ -106,8 +108,9 @@ public class MeyersBriggsQuestion {
             System.out.println("Kindly pick an option: A or B");
 
 
-            option = "A";
-//            option = input.nextLine();
+           option = "A";
+ //           option = input.nextLine();
+           // if(option.equalsIgnoreCase("B"))
 
             if (option.equalsIgnoreCase("A")) {
                 questionResponses[i] = 1;

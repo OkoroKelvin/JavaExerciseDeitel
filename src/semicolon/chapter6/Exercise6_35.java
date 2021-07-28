@@ -27,6 +27,7 @@ public class Exercise6_35 {
         String prompt = """
                 Welcome to the the application of multiplication
                 """;
+        System.out.println(prompt);
         newQuestions();
         userMyInput = input.nextInt();
         int totalRandomValue = randomValue * randomValue2;
@@ -56,53 +57,3 @@ public class Exercise6_35 {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    public static void newQuestions() {
-//        randomValue = 1 + randomNumbers.nextInt(9);
-//        randomValue2 = 1 + randomNumbers.nextInt(9);
-//        System.out.println("How much is " + randomValue + " times " + randomValue2 + " ?");
-//        answerToQuestion(userInput, randomValue * randomValue2);
-//    }
-//
-//    public static void answerToQuestion(int userInput, int totalRandomValues) {
-//        if (userInput == totalRandomValues) {
-//            System.out.println("Good work!");
-//            newQuestions();
-//
-//        } else {
-//            userInput = input.nextInt();
-//            System.out.println("Try again");
-//            //userInput = input.nextInt();
-//            answerToQuestion(userInput, randomValue * randomValue2);
-//
-//        }
-//    }
-//}
