@@ -8,4 +8,8 @@ public class Cart {
     public void addItemToCart(Item item) {
         items.add(item);
     }
+
+    public List getItemsCart() {
+        return items;
+    }
 }

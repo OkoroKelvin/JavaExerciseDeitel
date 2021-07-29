@@ -16,4 +16,11 @@ public class CartTest {
         cart.addItemToCart(item);
         assertNotNull(cart);
     }
+    @Test
+    void ItemsCanBeGottenFromCart(){
+        Cart cart = new Cart();
+        Item item = new Item("Null",0,0);
+        cart.getItemsCart();
+
+    }
 }
