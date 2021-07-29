@@ -7,6 +7,7 @@ public class SalesAppMain {
         String itemBought;
         int productQuantity;
         double productPrice;
+        Cart cart = new Cart();
 
         Scanner input = new Scanner(System.in);
         String prompt = """
@@ -35,7 +36,6 @@ public class SalesAppMain {
 
 
             Item item = new Item(itemBought, productPrice, productQuantity);
-            Cart cart = new Cart();
             cart.addItemToCart(item);
 
 
@@ -43,6 +43,23 @@ public class SalesAppMain {
             calculate = input.nextLine();
         }
 
-        public void displayInvoice(Cart)
+        displayInvoice(cart);
+
+    }
+
+    public static void displayInvoice(Cart itemCart) {
+        Cart items = itemCart;
+        System.out.printf("%30s\n\n", "GENERAL INVOICE");
+        System.out.printf("%10s%10s%10s%15s%10s\n", "Item Number", "Item", "Price", "Quantity", "Total");
+        for (int i = 0; i < items.getItemsCart().size(); i++) {
+            Item item = items.getItemsCart().get(i);
+            String itemName = item.getItemName();
+            double itemPrice = item.getPriceOfItem();
+            double itemQuantity = item.getItemQuantity();
+            double itemTotal = itemPrice * itemQuantity;
+
+            System.out.printf("%10s%10s%10s%15s%10s\n", i+1,itemName,itemPrice,itemQuantity,itemTotal);
+        }
+
     }
 }

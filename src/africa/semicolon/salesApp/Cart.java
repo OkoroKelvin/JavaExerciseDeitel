@@ -9,7 +9,7 @@ public class Cart {
         items.add(item);
     }
 
-    public List getItemsCart() {
+    public List<Item> getItemsCart() {
         return items;
     }
 }
