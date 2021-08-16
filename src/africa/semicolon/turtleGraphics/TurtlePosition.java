@@ -19,4 +19,9 @@ public class TurtlePosition {
     public void decreaseColumnPositionBy(int numberOfSteps) {
         columnPosition -= numberOfSteps;
     }
+
+    public void increaseRowPositionBy(int numberOfSteps) {
+        rowPosition += numberOfSteps;
+    }
+
 }

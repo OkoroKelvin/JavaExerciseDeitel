@@ -40,13 +40,14 @@ public class DiaryTest {
         Entry entry = new Entry();
         entry.setTitle("Heart Torn Apart");
         entry.setBody("Because of ordinary cake");
-
         diary.addEntry(entry);
-        diary.addEntry("The Love","Turn to page 2");
 
+        diary.addEntry("The Love","Turn to page 2");
         Entry foundEntry = diary.findEntryByTitle("Heart Torn Apart");
+
         assertEquals(foundEntry, entry);
     }
+
     @Test
     public void diaryCanBeDeletedByTitle(){
         Diary diary = new Diary ( "Blessing Diary");

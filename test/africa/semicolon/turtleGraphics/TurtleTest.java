@@ -18,9 +18,7 @@ public class TurtleTest {
         Turtle ijapa = new Turtle();
         Pen biro = new Pen();
         ijapa.setPen(biro);
-
         assertSame(biro, ijapa.getPen());
-
     }
 
     @Test
