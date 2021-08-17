@@ -7,7 +7,7 @@ import java.util.Scanner;
 two strings input by the user. Output whether the first string is less than, equal to or greater than
 the second.
  */
-public class Exercise14_3 {
+public class ComparingStrings {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Kindly input your Sentences");

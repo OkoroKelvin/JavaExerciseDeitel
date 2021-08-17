@@ -1,4 +1,4 @@
-package semicolon.chapter14;
+package semicolon.chapter5;
 
 import java.security.SecureRandom;
 
@@ -8,7 +8,6 @@ rhyme with the fifth, and the third line rhymes with the fourth.
 Using techniques similar to those developed in Exercise 14.5, write a Java application that produces random limericks. Polishing this application
 to produce good limericks is a challenging problem, but the result will be worth the effort
  */
-public class Exercise14_6 {
     public class Limericks {
         private String[] firstLimericksRhymes;
         private String[] secondLimericksRhymes;
@@ -84,4 +83,3 @@ public class Exercise14_6 {
                     .append(articles[generateRandomNumber()]).append(space).append(nouns[generateRandomNumber()]).append(space).append(limericksRhymes[generateRandomNumber()]).append(".\n");
         }
     }
-}

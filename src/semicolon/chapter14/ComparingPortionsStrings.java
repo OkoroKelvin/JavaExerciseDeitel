@@ -9,7 +9,7 @@ The application should input the number of characters to be compared and the st
 whether the strings are equal. Ignore the case of the characters when performing the comparison.
 
  */
-public class Exercise14_4 {
+public class ComparingPortionsStrings {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Kindly input your Sentences");
