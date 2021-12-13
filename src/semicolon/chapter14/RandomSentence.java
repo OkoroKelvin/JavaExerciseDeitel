@@ -3,6 +3,13 @@ package semicolon.chapter14;
 import java.security.SecureRandom;
 
 public class RandomSentence {
+    public static void main(String[] args) {
+        RandomSentence randomSentence = new RandomSentence();
+        for (int i = 0; i < 20; i++) {
+
+            System.out.println(randomSentence.generateSentence());
+        }
+    }
 
     private String[] articles;
     private String[] nouns;

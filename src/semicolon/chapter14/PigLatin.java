@@ -1,6 +1,16 @@
 package semicolon.chapter14;
 
 public class PigLatin {
+    public static void main(String[] args) {
+        PigLatin pig = new PigLatin();
+        String Sentence = "The Value";
+        char[] charArray = new char[3];
+
+        System.out.println(pig.printLatin(Sentence));
+        System.out.println(pig.getWord());
+        pig.split(Sentence);
+
+    }
         private StringBuilder word;
 
         public PigLatin() {

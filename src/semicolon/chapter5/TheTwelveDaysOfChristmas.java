@@ -10,8 +10,6 @@ public class TheTwelveDaysOfChristmas {
         days=input.nextInt();
 
         while (days <= 12) {
-
-
             switch (days) {
                 case 1:
                     System.out.println("On the first day of Christmas my true love sent to me");

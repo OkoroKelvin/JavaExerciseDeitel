@@ -3,8 +3,8 @@ import java.util.Scanner;
 //Arithmetic, Smallest and Largest
 public class Exercise2_17 {
 
-    public static void main(String...args)
-    {
+    public static void main(String[] args) {
+
         int num1;
         int num2;
         int num3;

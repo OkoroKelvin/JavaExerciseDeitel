@@ -20,7 +20,7 @@ public class Exercise6_24 {
             int remiander = numbers % count;
             if (remiander == 0) {
                 total = total + count;
-                factor= factor+ " " + count;
+                factor= factor + " " + count;
             }
         }
         if (total == numbers){
