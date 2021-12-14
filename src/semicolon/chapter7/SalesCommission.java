@@ -17,51 +17,26 @@ public class SalesCommission {
 
     public static void main(String[] args) {
         double[] earnings = new double[100];
-        int[] frequency = new int[9];
-        String[]rangeMoney = new String[9];
-        rangeMoney[0] = "value<=299";
-        rangeMoney[1] = "value>=300&&value<=399";
-        rangeMoney[2] = "value>=400 && value <=499";
-        rangeMoney[3] = "value>=500 && value <=599";
-        rangeMoney[4] = "value>=600 && value <=699";
-        rangeMoney[5] = "value>=700 && value <=799";
-        rangeMoney[6] = "value>=800 && value <=899";
-        rangeMoney[7] = "value>=900 && value <=999";
-        rangeMoney[8] = " value 1,000 and over";
+        int[] frequency = new int[11];
 
         fillArray(earnings);
         for (double value : earnings) {
-            if(value<=299){
-                ++frequency[0];
-            }
-            if(value>=300&&value<=399){
-                ++frequency[1];
-            }
-            if(value>=400 && value <=499){
-                ++frequency[2];
-            }
-            if(value>=500 && value <=599){
-                ++frequency[3];
-            }
-            if(value>=600 && value <=699){
-                ++frequency[4];
-            }
-            if(value>=700 && value <=799){
-                ++frequency[5];
-            }
-            if(value>=800 && value <=899){
-                ++frequency[6];
-            }
-            if(value>=900 && value <=999){
-                ++frequency[7];
-            }if(value>=1000){
-                ++frequency[8];
+            if ((int) value / 100 < 10) {
+                ++frequency[((int) value / 100)];
+            } else {
+                ++frequency[10];
             }
         }
 
         System.out.printf("%s%21s%n%n", "Salaries", "Salespeople");
-        for(int i = 0; i < frequency.length; i++){
-            System.out.printf("%s%21s%n%n", rangeMoney[i], frequency[i]);
+        for (int count = 2; count < frequency.length; count++) {
+            if(count<10){
+                System.out.printf("$%3d-%3d", count * 100, count * 100 + 99);
+                System.out.printf("%21d%n", frequency[count]);
+            }else {
+                System.out.printf("$%s  ", "1000 and over");
+                System.out.printf("%13d%n", frequency[count]);
+            }
         }
     }
 }
